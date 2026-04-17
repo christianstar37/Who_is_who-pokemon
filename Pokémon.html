@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuál es tu Pokémon?</title>
+    <link rel="stylesheet" href="Pokémon.css">
+    <script src="Pokémon.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="titulo">¿Quién es Quién? - Versión Pokémon</h1>
+    </header>
+    <main>
+      <div id="tu_pokemon">
+        <label for="pokemonElegido">Elije tu pokémon:</label>
+        <select name="pokemonElegido" id="pokemonElegido" onchange="actualizarPokemon()">
+          <option value="Sylveon">Sylveon</option>
+          <option value="Primarina">Primarina</option>
+          <option value="Tsareena">Tsareena</option>
+          <option value="Togedemaru">Togedemaru</option>
+          <option value="Decidueye">Decidueye</option>
+          <option value="Espeon">Espeon</option>
+          <option value="Pheromosa">Pheromosa</option>
+          <option value="Nihilego">Nihilego</option>
+          <option value="Noivern">Noivern</option>
+          <option value="Mimikyu">Mimikyu</option>
+          <option value="Salazzle">Salazzle</option>
+          <option value="Aurorus">Aurorus</option>
+          <option value="Quaquaval">Quaquaval</option>
+          <option value="Umbreon">Umbreon</option>
+          <option value="Spinda">Spinda</option>
+          <option value="Morpeko">Morpeko</option>
+          <option value="Emolga">Emolga</option>
+          <option value="Dragonair">Dragonair</option>
+          <option value="Indeedee">Indeedee</option>
+          <option value="Milotic">Milotic</option>
+          <option value="Piplup">Piplup</option>
+          <option value="Rayquaza">Rayquaza</option>
+          <option value="Gardevoir">Gardevoir</option>
+          <option value="Meowscarada">Meowscarada</option>
+          <option value="Krokodile">Krokodile</option>
+        </select>
+        <p>Tu Pokémon</p>
+        <img id="imagenPokemon" src="Retratos/Sylveon/Inspired.png">
+      </div>
+      <div id="adivina">
+        <table>
+          <tr>
+            <td><img class="pokemon" id="Sylveon" src="Retratos/Sylveon/Inspired.png" data-original="Retratos/Sylveon/Inspired.png" data-toggled="Retratos/Sylveon/Sad.png" onclick="cambiarImagen(this)"><p>Sylveon</p></td>
+            <td><img class="pokemon" id="Primarina" src="Retratos/Primarina/Inspired.png" data-original="Retratos/Primarina/Inspired.png" data-toggled="Retratos/Primarina/Sad.png" onclick="cambiarImagen(this)"><p>Primarina</p></td>
+            <td><img class="pokemon" id="Tsareena" src="Retratos/Tsareena/Inspired.png" data-original="Retratos/Tsareena/Inspired.png" data-toggled="Retratos/Tsareena/Sad.png" onclick="cambiarImagen(this)"><p>Tsareena</p></td>
+            <td><img class="pokemon" id="Togedemaru" src="Retratos/Togedemaru/Inspired.png" data-original="Retratos/Togedemaru/Inspired.png" data-toggled="Retratos/Togedemaru/Sad.png" onclick="cambiarImagen(this)"><p>Togedemaru</p></td>
+            <td><img class="pokemon" id="Decidueye" src="Retratos/Decidueye/Inspired.png" data-original="Retratos/Decidueye/Inspired.png" data-toggled="Retratos/Decidueye/Sad.png" onclick="cambiarImagen(this)"><p>Decidueye</p></td>
+          </tr>
+          <tr>
+            <td><img class="pokemon" id="Espeon" src="Retratos/Espeon/Inspired.png" data-original="Retratos/Espeon/Inspired.png" data-toggled="Retratos/Espeon/Sad.png" onclick="cambiarImagen(this)"><p>Espeon</p></td> <!--Justo sus imagenes eran de base normal y determinado-->
+            <td><img class="pokemon" id="Umbreon" src="Retratos/Umbreon/Inspired.png" data-original="Retratos/Umbreon/Inspired.png" data-toggled="Retratos/Umbreon/Sad.png" onclick="cambiarImagen(this)"><p>Umbreon</p></td>
+            <td><img class="pokemon" id="Pheromosa" src="Retratos/Pheromosa/Inspired.png" data-original="Retratos/Pheromosa/Inspired.png" data-toggled="Retratos/Pheromosa/Sad.png" onclick="cambiarImagen(this)"><p>Pheromosa</p></td>
+            <td><img class="pokemon" id="Nihilego" src="Retratos/Nihilego/Inspired.png" data-original="Retratos/Nihilego/Inspired.png" data-toggled="Retratos/Nihilego/Sad.png" onclick="cambiarImagen(this)"><p>Nihilego</p></td>
+            <td><img class="pokemon" id="Mimikyu" src="Retratos/Mimikyu/Inspired.png" data-original="Retratos/Mimikyu/Inspired.png" data-toggled="Retratos/Mimikyu/Sad.png" onclick="cambiarImagen(this)"><p>Mimikyu</p></td>
+          </tr>
+          <tr>
+            <td><img class="pokemon" id="Noivern" src="Retratos/Noivern/Inspired.png" data-original="Retratos/Noivern/Inspired.png" data-toggled="Retratos/Noivern/Sad.png" onclick="cambiarImagen(this)"><p>Noivern</p></td>
+            <td><img class="pokemon" id="Salazzle" src="Retratos/Salazzle/Inspired.png" data-original="Retratos/Salazzle/Inspired.png" data-toggled="Retratos/Salazzle/Sad.png" onclick="cambiarImagen(this)"><p>Salazzle</p></td>
+            <td><img class="pokemon" id="Aurorus" src="Retratos/Aurorus/Inspired.png" data-original="Retratos/Aurorus/Inspired.png" data-toggled="Retratos/Aurorus/Sad.png" onclick="cambiarImagen(this)"><p>Aurorus</p></td>
+            <td><img class="pokemon" id="Quaquaval" src="Retratos/Quaquaval/Inspired.png" data-original="Retratos/Quaquaval/Inspired.png" data-toggled="Retratos/Quaquaval/Sad.png" onclick="cambiarImagen(this)"><p>Quaquaval</p></td>
+            <td><img class="pokemon" id="Spinda" src="Retratos/Spinda/Inspired.png" data-original="Retratos/Spinda/Inspired.png" data-toggled="Retratos/Spinda/Sad.png" onclick="cambiarImagen(this)"><p>Spinda</p></td>
+          </tr>
+          <tr>
+            <td><img class="pokemon" id="Morpeko" src="Retratos/Morpeko/Inspired.png" data-original="Retratos/Morpeko/Inspired.png" data-toggled="Retratos/Morpeko/Sad.png" onclick="cambiarImagen(this)"><p>Morpeko</p></td>
+            <td><img class="pokemon" id="Emolga" src="Retratos/Emolga/Inspired.png" data-original="Retratos/Emolga/Inspired.png" data-toggled="Retratos/Emolga/Sad.png" onclick="cambiarImagen(this)"><p>Emolga</p></td>
+            <td><img class="pokemon" id="Dragonair" src="Retratos/Dragonair/Inspired.png" data-original="Retratos/Dragonair/Inspired.png" data-toggled="Retratos/Dragonair/Sad.png" onclick="cambiarImagen(this)"><p>Dragonair</p></td>
+            <td><img class="pokemon" id="Indeedee" src="Retratos/Indeedee/Inspired.png" data-original="Retratos/Indeedee/Inspired.png" data-toggled="Retratos/Indeedee/Sad.png" onclick="cambiarImagen(this)"><p>Indeedee</p></td>
+            <td><img class="pokemon" id="Milotic" src="Retratos/Milotic/Inspired.png" data-original="Retratos/Milotic/Inspired.png" data-toggled="Retratos/Milotic/Sad.png" onclick="cambiarImagen(this)"><p>Milotic</p></td>
+          </tr>
+          <tr>
+            <td><img class="pokemon" id="Piplup" src="Retratos/Piplup/Inspired.png" data-original="Retratos/Piplup/Inspired.png" data-toggled="Retratos/Piplup/Sad.png" onclick="cambiarImagen(this)"><p>Piplup</p></td>
+            <td><img class="pokemon" id="Rayquaza" src="Retratos/Rayquaza/Inspired.png" data-original="Retratos/Rayquaza/Inspired.png" data-toggled="Retratos/Rayquaza/Sad.png" onclick="cambiarImagen(this)"><p>Rayquaza</p></td>
+            <td><img class="pokemon" id="Gardevoir" src="Retratos/Gardevoir/Inspired.png" data-original="Retratos/Gardevoir/Inspired.png" data-toggled="Retratos/Gardevoir/Sad.png" onclick="cambiarImagen(this)"><p>Gardevoir</p></td>
+            <td><img class="pokemon" id="Meowscarada" src="Retratos/Meowscarada/Inspired.png" data-original="Retratos/Meowscarada/Inspired.png" data-toggled="Retratos/Meowscarada/Sad.png" onclick="cambiarImagen(this)"><p>Meowscarada</p></td>
+            <td><img class="pokemon" id="Krokodile" src="Retratos/Krokodile/Inspired.png" data-original="Retratos/Krokodile/Inspired.png" data-toggled="Retratos/Krokodile/Sad.png" onclick="cambiarImagen(this)"><p>Krokodile</p></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <p>Holi cariño, esto lo estoy haciendo poco a poco, no sé para cuándo lo tendré pero espero que te guste</p>
+    </footer>
+  </body>
+</html>
